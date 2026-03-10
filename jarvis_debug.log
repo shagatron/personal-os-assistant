@@ -1,0 +1,91 @@
+{"time": "2026-03-10 01:11:34", "event": "planner_warmup", "data": {"status": "success", "model": "qwen2.5:7b", "host": "http://localhost:11434"}}
+{"time": "2026-03-10 01:12:06", "event": "user_input", "data": {"input": "spotify mute"}}
+{"time": "2026-03-10 01:12:06", "event": "parser_output", "data": {"parsed": {"intent": "unknown", "raw": "spotify mute"}}}
+{"time": "2026-03-10 01:12:06", "event": "parser_fallback_to_planner", "data": {"reason": "unknown_single_intent", "parsed": {"intent": "unknown", "raw": "spotify mute"}}}
+{"time": "2026-03-10 01:12:06", "event": "agent_loop_start", "data": {"user_input": "spotify mute", "max_steps": 6}}
+{"time": "2026-03-10 01:12:06", "event": "agent_loop_state", "data": {"step_number": 1, "current_state": "Active window: Active window: main.py - OS assistant - Visual Studio Code", "previous_steps": []}}
+{"time": "2026-03-10 01:12:06", "event": "planner_prompt", "data": {"user_goal": "spotify mute", "current_state": "Active window: Active window: main.py - OS assistant - Visual Studio Code", "previous_steps": [], "prompt": "User goal:\nspotify mute\n\nCurrent desktop state:\nActive window: Active window: main.py - OS assistant - Visual Studio Code\n\nPrevious steps already executed:\n[]\n\nChoose the single best next action.\n\nReturn exactly one JSON object."}}
+{"time": "2026-03-10 01:13:01", "event": "planner_warmup", "data": {"status": "success", "model": "qwen2.5:7b", "host": "http://localhost:11434"}}
+{"time": "2026-03-10 01:13:04", "event": "user_input", "data": {"input": "mute spotify"}}
+{"time": "2026-03-10 01:13:04", "event": "parser_output", "data": {"parsed": {"intent": "spotify_mute"}}}
+{"time": "2026-03-10 01:13:04", "event": "executor_command", "data": {"command": {"intent": "spotify_mute"}, "source": "parser_single"}}
+{"time": "2026-03-10 01:13:05", "event": "executor_result", "data": {"command": {"intent": "spotify_mute"}, "result": "Toggled mute.", "source": "parser_single"}}
+{"time": "2026-03-10 01:54:22", "event": "user_input", "data": {"input": "exit"}}
+{"time": "2026-03-10 01:54:22", "event": "session_end", "data": {"reason": "user_exit"}}
+{"time": "2026-03-10 01:54:44", "event": "planner_warmup", "data": {"status": "success", "model": "qwen2.5:7b", "host": "http://localhost:11434"}}
+{"time": "2026-03-10 02:07:15", "event": "user_input", "data": {"input": "exit"}}
+{"time": "2026-03-10 02:07:15", "event": "session_end", "data": {"reason": "user_exit"}}
+{"time": "2026-03-10 10:05:18", "event": "planner_warmup", "data": {"status": "success", "model": "qwen2.5:7b", "host": "http://localhost:11434"}}
+{"time": "2026-03-10 10:06:02", "event": "user_input", "data": {"input": "open chrome"}}
+{"time": "2026-03-10 10:06:02", "event": "parser_output", "data": {"parsed": {"intent": "open_app", "target": "chrome"}}}
+{"time": "2026-03-10 10:06:02", "event": "executor_command", "data": {"command": {"intent": "open_app", "target": "chrome"}, "source": "parser_single"}}
+{"time": "2026-03-10 10:06:02", "event": "plan_preview", "data": {"step": {"intent": "open_app", "target": "chrome"}, "source": "parser_single"}}
+{"time": "2026-03-10 10:06:11", "event": "executor_result", "data": {"command": {"intent": "open_app", "target": "chrome"}, "result": "Focused window: ChatGPT - JARVIS - Google Chrome", "source": "parser_single"}}
+{"time": "2026-03-10 10:06:11", "event": "workflow_cached", "data": {"command_text": "open chrome", "intent": "open_app", "params": {"target": "chrome"}, "source": "parser_single"}}
+{"time": "2026-03-10 10:06:20", "event": "user_input", "data": {"input": "new tab"}}
+{"time": "2026-03-10 10:06:20", "event": "parser_output", "data": {"parsed": {"intent": "new_tab"}}}
+{"time": "2026-03-10 10:06:20", "event": "executor_command", "data": {"command": {"intent": "new_tab"}, "source": "parser_single"}}
+{"time": "2026-03-10 10:06:20", "event": "plan_preview", "data": {"step": {"intent": "new_tab"}, "source": "parser_single"}}
+{"time": "2026-03-10 10:06:21", "event": "executor_result", "data": {"command": {"intent": "new_tab"}, "result": "Opened new tab.", "source": "parser_single"}}
+{"time": "2026-03-10 10:06:21", "event": "workflow_cached", "data": {"command_text": "new tab", "intent": "new_tab", "params": {}, "source": "parser_single"}}
+{"time": "2026-03-10 10:06:35", "event": "user_input", "data": {"input": "open chrome then new tab"}}
+{"time": "2026-03-10 10:06:35", "event": "parser_output", "data": {"parsed": [{"intent": "open_app", "target": "chrome"}, {"intent": "new_tab"}]}}
+{"time": "2026-03-10 10:06:35", "event": "executor_command", "data": {"command": {"intent": "open_app", "target": "chrome"}, "source": "parser_batch"}}
+{"time": "2026-03-10 10:06:35", "event": "plan_preview", "data": {"step": {"intent": "open_app", "target": "chrome"}, "source": "parser_batch"}}
+{"time": "2026-03-10 10:06:37", "event": "executor_result", "data": {"command": {"intent": "open_app", "target": "chrome"}, "result": "Focused window: ChatGPT - JARVIS - Google Chrome", "source": "parser_batch"}}
+{"time": "2026-03-10 10:06:37", "event": "workflow_cached", "data": {"command_text": "open chrome then new tab", "intent": "open_app", "params": {"target": "chrome"}, "source": "parser_batch"}}
+{"time": "2026-03-10 10:06:38", "event": "executor_command", "data": {"command": {"intent": "new_tab"}, "source": "parser_batch"}}
+{"time": "2026-03-10 10:06:38", "event": "plan_preview", "data": {"step": {"intent": "new_tab"}, "source": "parser_batch"}}
+{"time": "2026-03-10 10:07:14", "event": "executor_result", "data": {"command": {"intent": "new_tab"}, "result": "Opened new tab.", "source": "parser_batch"}}
+{"time": "2026-03-10 10:07:14", "event": "workflow_cached", "data": {"command_text": "open chrome then new tab", "intent": "new_tab", "params": {}, "source": "parser_batch"}}
+{"time": "2026-03-10 10:07:23", "event": "user_input", "data": {"input": "focus address bar"}}
+{"time": "2026-03-10 10:07:23", "event": "parser_output", "data": {"parsed": {"intent": "focus_address_bar"}}}
+{"time": "2026-03-10 10:07:23", "event": "executor_command", "data": {"command": {"intent": "focus_address_bar"}, "source": "parser_single"}}
+{"time": "2026-03-10 10:07:23", "event": "plan_preview", "data": {"step": {"intent": "focus_address_bar"}, "source": "parser_single"}}
+{"time": "2026-03-10 10:07:24", "event": "executor_result", "data": {"command": {"intent": "focus_address_bar"}, "result": "Focused address bar.", "source": "parser_single"}}
+{"time": "2026-03-10 10:07:24", "event": "workflow_cached", "data": {"command_text": "focus address bar", "intent": "focus_address_bar", "params": {}, "source": "parser_single"}}
+{"time": "2026-03-10 10:07:39", "event": "user_input", "data": {"input": "pause spotify"}}
+{"time": "2026-03-10 10:07:39", "event": "parser_output", "data": {"parsed": {"intent": "spotify_play_pause"}}}
+{"time": "2026-03-10 10:07:39", "event": "executor_command", "data": {"command": {"intent": "spotify_play_pause"}, "source": "parser_single"}}
+{"time": "2026-03-10 10:07:40", "event": "plan_preview", "data": {"step": {"intent": "spotify_play_pause"}, "source": "parser_single"}}
+{"time": "2026-03-10 10:07:40", "event": "executor_result", "data": {"command": {"intent": "spotify_play_pause"}, "result": "Toggled Spotify play/pause.", "source": "parser_single"}}
+{"time": "2026-03-10 10:07:40", "event": "workflow_cached", "data": {"command_text": "pause spotify", "intent": "spotify_play_pause", "params": {}, "source": "parser_single"}}
+{"time": "2026-03-10 10:07:47", "event": "user_input", "data": {"input": "focus spotify"}}
+{"time": "2026-03-10 10:07:48", "event": "parser_output", "data": {"parsed": {"intent": "focus_window", "target": "spotify"}}}
+{"time": "2026-03-10 10:07:48", "event": "executor_command", "data": {"command": {"intent": "focus_window", "target": "spotify"}, "source": "parser_single"}}
+{"time": "2026-03-10 10:07:48", "event": "plan_preview", "data": {"step": {"intent": "focus_window", "target": "spotify"}, "source": "parser_single"}}
+{"time": "2026-03-10 10:07:48", "event": "executor_result", "data": {"command": {"intent": "focus_window", "target": "spotify"}, "result": "No open window found matching 'spotify'.", "source": "parser_single"}}
+{"time": "2026-03-10 10:07:48", "event": "workflow_cached", "data": {"command_text": "focus spotify", "intent": "focus_window", "params": {"target": "spotify"}, "source": "parser_single"}}
+{"time": "2026-03-10 10:07:52", "event": "user_input", "data": {"input": "open spotify"}}
+{"time": "2026-03-10 10:07:52", "event": "parser_output", "data": {"parsed": {"intent": "open_app", "target": "spotify"}}}
+{"time": "2026-03-10 10:07:52", "event": "executor_command", "data": {"command": {"intent": "open_app", "target": "spotify"}, "source": "parser_single"}}
+{"time": "2026-03-10 10:07:52", "event": "plan_preview", "data": {"step": {"intent": "open_app", "target": "spotify"}, "source": "parser_single"}}
+{"time": "2026-03-10 10:07:52", "event": "executor_result", "data": {"command": {"intent": "open_app", "target": "spotify"}, "result": "No open window found matching 'spotify'.", "source": "parser_single"}}
+{"time": "2026-03-10 10:07:52", "event": "workflow_cached", "data": {"command_text": "open spotify", "intent": "open_app", "params": {"target": "spotify"}, "source": "parser_single"}}
+{"time": "2026-03-10 10:08:11", "event": "user_input", "data": {"input": "search github in chrome"}}
+{"time": "2026-03-10 10:08:11", "event": "parser_output", "data": {"parsed": {"intent": "chrome_search", "query": "github in chrome"}}}
+{"time": "2026-03-10 10:08:11", "event": "executor_command", "data": {"command": {"intent": "chrome_search", "query": "github in chrome"}, "source": "parser_single"}}
+{"time": "2026-03-10 10:08:11", "event": "plan_preview", "data": {"step": {"intent": "chrome_search", "query": "github in chrome"}, "source": "parser_single"}}
+{"time": "2026-03-10 10:08:15", "event": "executor_result", "data": {"command": {"intent": "chrome_search", "query": "github in chrome"}, "result": "Focused window: ChatGPT - JARVIS - Google Chrome\nSearching Chrome for: github in chrome", "source": "parser_single"}}
+{"time": "2026-03-10 10:08:15", "event": "workflow_cached", "data": {"command_text": "search github in chrome", "intent": "chrome_search", "params": {"query": "github in chrome"}, "source": "parser_single"}}
+{"time": "2026-03-10 10:08:33", "event": "user_input", "data": {"input": "search github in chrome"}}
+{"time": "2026-03-10 10:08:33", "event": "workflow_cache_hit", "data": {"user_input": "search github in chrome", "cached": {"command": "search github in chrome", "intent": "chrome_search", "params": {"query": "github in chrome"}, "created_at": "2026-03-10 04:38:15"}}}
+{"time": "2026-03-10 10:08:33", "event": "plan_preview", "data": {"step": {"command": "search github in chrome", "intent": "chrome_search", "params": {"query": "github in chrome"}, "created_at": "2026-03-10 04:38:15"}, "source": "workflow_cache"}}
+{"time": "2026-03-10 10:08:39", "event": "plan_cancelled", "data": {"step": {"command": "search github in chrome", "intent": "chrome_search", "params": {"query": "github in chrome"}, "created_at": "2026-03-10 04:38:15"}, "source": "workflow_cache"}}
+{"time": "2026-03-10 10:08:44", "event": "user_input", "data": {"input": "search github in chrome"}}
+{"time": "2026-03-10 10:08:44", "event": "workflow_cache_hit", "data": {"user_input": "search github in chrome", "cached": {"command": "search github in chrome", "intent": "chrome_search", "params": {"query": "github in chrome"}, "created_at": "2026-03-10 04:38:15"}}}
+{"time": "2026-03-10 10:08:44", "event": "plan_preview", "data": {"step": {"command": "search github in chrome", "intent": "chrome_search", "params": {"query": "github in chrome"}, "created_at": "2026-03-10 04:38:15"}, "source": "workflow_cache"}}
+{"time": "2026-03-10 10:08:45", "event": "executor_command", "data": {"command": {"command": "search github in chrome", "intent": "chrome_search", "params": {"query": "github in chrome"}, "created_at": "2026-03-10 04:38:15"}, "source": "workflow_cache"}}
+{"time": "2026-03-10 10:08:45", "event": "executor_result", "data": {"command": {"command": "search github in chrome", "intent": "chrome_search", "params": {"query": "github in chrome"}, "created_at": "2026-03-10 04:38:15"}, "result": "Missing required field for intent 'chrome_search': 'query'", "source": "workflow_cache"}}
+{"time": "2026-03-10 10:10:03", "event": "user_input", "data": {"input": "search github"}}
+{"time": "2026-03-10 10:10:03", "event": "parser_output", "data": {"parsed": {"intent": "chrome_search", "query": "github"}}}
+{"time": "2026-03-10 10:10:03", "event": "executor_command", "data": {"command": {"intent": "chrome_search", "query": "github"}, "source": "parser_single"}}
+{"time": "2026-03-10 10:10:03", "event": "plan_preview", "data": {"step": {"intent": "chrome_search", "query": "github"}, "source": "parser_single"}}
+{"time": "2026-03-10 10:10:07", "event": "executor_result", "data": {"command": {"intent": "chrome_search", "query": "github"}, "result": "Focused window: (27) WhatsApp - Google Chrome\nSearching Chrome for: github", "source": "parser_single"}}
+{"time": "2026-03-10 10:10:07", "event": "workflow_cached", "data": {"command_text": "search github", "intent": "chrome_search", "params": {"query": "github"}, "source": "parser_single"}}
+{"time": "2026-03-10 10:10:07", "event": "user_input", "data": {"input": "githubse"}}
+{"time": "2026-03-10 10:10:07", "event": "parser_output", "data": {"parsed": {"intent": "unknown", "raw": "githubse"}}}
+{"time": "2026-03-10 10:10:07", "event": "parser_fallback_to_planner", "data": {"reason": "unknown_single_intent", "parsed": {"intent": "unknown", "raw": "githubse"}}}
+{"time": "2026-03-10 10:10:07", "event": "agent_loop_start", "data": {"user_input": "githubse", "max_steps": 6}}
+{"time": "2026-03-10 10:10:07", "event": "agent_loop_state", "data": {"step_number": 1, "current_state": "Active window: Active window: memory.py - OS assistant - Visual Studio Code", "previous_steps": []}}
+{"time": "2026-03-10 10:10:07", "event": "planner_prompt", "data": {"user_goal": "githubse", "current_state": "Active window: Active window: memory.py - OS assistant - Visual Studio Code", "previous_steps": [], "prompt": "User goal:\ngithubse\n\nCurrent desktop state:\nActive window: Active window: memory.py - OS assistant - Visual Studio Code\n\nPrevious steps already executed:\n[]\n\nChoose the single best next action.\n\nReturn exactly one JSON object."}}

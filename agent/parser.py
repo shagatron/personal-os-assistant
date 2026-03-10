@@ -1,6 +1,30 @@
 def parse_single_command(user_input: str) -> dict:
     text = user_input.lower().strip()
 
+
+    if text.startswith("search "):
+        return {
+        "intent": "chrome_search",
+        "query": user_input[7:].strip()
+    }
+
+    if text.startswith("vscode open file "):
+        return {
+        "intent": "vscode_open_file",
+        "filename": user_input[17:].strip()
+    }
+
+    if text.startswith("type "):
+        return {"intent": "type_text", "text": user_input[5:].strip()}
+
+    if text == "press enter":
+        return {"intent": "press_enter"}
+    if text.startswith("chrome search "):
+        return{
+        "intent": "chrome_search",
+        "query": user_input[14:].strip()
+        }
+    
     if text == "active window":
         return {"intent": "active_window"}
 
@@ -33,6 +57,44 @@ def parse_single_command(user_input: str) -> dict:
 
     if text == "vscode command palette":
         return {"intent": "vscode_command_palette"}
+
+    
+    if text.startswith("vscode open file "):
+        return {
+            "intent": "vscode_open_file",
+            "filename": user_input[17:].strip()
+        }
+
+    if text.startswith("vscode search "):
+        return {
+            "intent": "vscode_search",
+            "query": user_input[14:].strip()
+        }
+
+    if text.startswith("vscode new file "):
+        return {
+            "intent": "vscode_new_file",
+            "filename": user_input[16:].strip()
+        }
+    
+
+    if text in ["pause spotify", "play spotify", "resume spotify", "spotify play", "spotify pause"]:
+        return {"intent": "spotify_play_pause"}
+
+    if text in ["next song", "next track", "spotify next", "skip song", "skip track"]:
+        return {"intent": "spotify_next_track"}
+
+    if text in ["previous song", "previous track", "spotify previous", "last song"]:
+        return {"intent": "spotify_previous_track"}
+
+    if text in ["volume up", "increase volume", "spotify volume up"]:
+        return {"intent": "spotify_volume_up"}
+
+    if text in ["volume down", "decrease volume", "spotify volume down"]:
+        return {"intent": "spotify_volume_down"}
+
+    if text in ["mute", "mute spotify"]:
+        return {"intent": "spotify_mute"}
 
     if text.startswith("focus "):
         return {"intent": "focus_window", "target": user_input[6:].strip()}
